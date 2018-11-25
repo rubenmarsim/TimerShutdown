@@ -37,6 +37,8 @@
             this.lblHoras = new System.Windows.Forms.Label();
             this.txtBoxHoras = new System.Windows.Forms.TextBox();
             this.txtBoxSecs = new System.Windows.Forms.TextBox();
+            this.btnCancionBB = new System.Windows.Forms.Button();
+            this.btnDisketera = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnExit
@@ -47,7 +49,7 @@
             this.btnExit.Location = new System.Drawing.Point(1762, 0);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(82, 41);
-            this.btnExit.TabIndex = 0;
+            this.btnExit.TabIndex = 6;
             this.btnExit.Text = "Salir";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -59,7 +61,7 @@
             this.btnShutdown.Location = new System.Drawing.Point(414, 765);
             this.btnShutdown.Name = "btnShutdown";
             this.btnShutdown.Size = new System.Drawing.Size(181, 41);
-            this.btnShutdown.TabIndex = 1;
+            this.btnShutdown.TabIndex = 4;
             this.btnShutdown.Text = "Apagar PC";
             this.btnShutdown.UseVisualStyleBackColor = true;
             this.btnShutdown.Click += new System.EventHandler(this.btnShutdown_Click);
@@ -71,7 +73,7 @@
             this.btnCancel.Location = new System.Drawing.Point(189, 765);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(138, 44);
-            this.btnCancel.TabIndex = 2;
+            this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Cancelar";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -84,7 +86,8 @@
             this.txtBoxMin.Location = new System.Drawing.Point(414, 619);
             this.txtBoxMin.Name = "txtBoxMin";
             this.txtBoxMin.Size = new System.Drawing.Size(181, 38);
-            this.txtBoxMin.TabIndex = 3;
+            this.txtBoxMin.TabIndex = 1;
+            this.txtBoxMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxMin_KeyPress);
             // 
             // lblMin
             // 
@@ -95,7 +98,7 @@
             this.lblMin.Location = new System.Drawing.Point(210, 626);
             this.lblMin.Name = "lblMin";
             this.lblMin.Size = new System.Drawing.Size(117, 31);
-            this.lblMin.TabIndex = 4;
+            this.lblMin.TabIndex = 8;
             this.lblMin.Text = "Minutos:";
             // 
             // lblSegundos
@@ -107,7 +110,7 @@
             this.lblSegundos.Location = new System.Drawing.Point(183, 687);
             this.lblSegundos.Name = "lblSegundos";
             this.lblSegundos.Size = new System.Drawing.Size(144, 31);
-            this.lblSegundos.TabIndex = 5;
+            this.lblSegundos.TabIndex = 9;
             this.lblSegundos.Text = "Segundos:";
             // 
             // lblHoras
@@ -119,7 +122,7 @@
             this.lblHoras.Location = new System.Drawing.Point(232, 561);
             this.lblHoras.Name = "lblHoras";
             this.lblHoras.Size = new System.Drawing.Size(95, 31);
-            this.lblHoras.TabIndex = 6;
+            this.lblHoras.TabIndex = 7;
             this.lblHoras.Text = "Horas:";
             // 
             // txtBoxHoras
@@ -130,7 +133,8 @@
             this.txtBoxHoras.Location = new System.Drawing.Point(414, 554);
             this.txtBoxHoras.Name = "txtBoxHoras";
             this.txtBoxHoras.Size = new System.Drawing.Size(181, 38);
-            this.txtBoxHoras.TabIndex = 7;
+            this.txtBoxHoras.TabIndex = 0;
+            this.txtBoxHoras.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxHoras_KeyPress);
             // 
             // txtBoxSecs
             // 
@@ -140,7 +144,32 @@
             this.txtBoxSecs.Location = new System.Drawing.Point(414, 684);
             this.txtBoxSecs.Name = "txtBoxSecs";
             this.txtBoxSecs.Size = new System.Drawing.Size(181, 38);
-            this.txtBoxSecs.TabIndex = 8;
+            this.txtBoxSecs.TabIndex = 2;
+            this.txtBoxSecs.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxSecs_KeyPress);
+            // 
+            // btnCancionBB
+            // 
+            this.btnCancionBB.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancionBB.FlatAppearance.BorderSize = 0;
+            this.btnCancionBB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancionBB.Location = new System.Drawing.Point(1333, 541);
+            this.btnCancionBB.Name = "btnCancionBB";
+            this.btnCancionBB.Size = new System.Drawing.Size(10, 11);
+            this.btnCancionBB.TabIndex = 10;
+            this.btnCancionBB.UseVisualStyleBackColor = false;
+            this.btnCancionBB.Click += new System.EventHandler(this.btnCancionBB_Click);
+            // 
+            // btnDisketera
+            // 
+            this.btnDisketera.BackColor = System.Drawing.Color.Transparent;
+            this.btnDisketera.FlatAppearance.BorderSize = 0;
+            this.btnDisketera.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDisketera.Location = new System.Drawing.Point(1344, 168);
+            this.btnDisketera.Name = "btnDisketera";
+            this.btnDisketera.Size = new System.Drawing.Size(10, 11);
+            this.btnDisketera.TabIndex = 11;
+            this.btnDisketera.UseVisualStyleBackColor = false;
+            this.btnDisketera.Click += new System.EventHandler(this.btnDisketera_Click);
             // 
             // Form1
             // 
@@ -150,6 +179,8 @@
             this.AutoSize = true;
             this.BackgroundImage = global::ApagarPC.Properties.Resources.DisneyWallpaperRosa;
             this.ClientSize = new System.Drawing.Size(1843, 1061);
+            this.Controls.Add(this.btnDisketera);
+            this.Controls.Add(this.btnCancionBB);
             this.Controls.Add(this.txtBoxSecs);
             this.Controls.Add(this.txtBoxHoras);
             this.Controls.Add(this.lblHoras);
@@ -162,6 +193,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -178,6 +210,8 @@
         private System.Windows.Forms.Label lblHoras;
         private System.Windows.Forms.TextBox txtBoxHoras;
         private System.Windows.Forms.TextBox txtBoxSecs;
+        private System.Windows.Forms.Button btnCancionBB;
+        private System.Windows.Forms.Button btnDisketera;
     }
 }
 
