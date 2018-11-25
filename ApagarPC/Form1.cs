@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -36,6 +37,17 @@ namespace ApagarPC
         {
             System.Diagnostics.Process.Start(strFileName, "/a");
             player.Stop();
+            try
+            {
+                foreach (Process proc in Process.GetProcessesByName("wscript.exe"))
+                {
+                    proc.Kill();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnShutdown_Click(object sender, EventArgs e)
@@ -127,7 +139,7 @@ namespace ApagarPC
 
         private void btnDisketera_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start(@"cscript //B //Nologo diquetera.vbs");
+            System.Diagnostics.Process.Start("diquetera.vbs");
         }
         #endregion
 
