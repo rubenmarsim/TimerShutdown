@@ -1,0 +1,9 @@
+D:\Prog\TimerShutdown\ApagarPC\bin\Release\ApagarPC.exe.config
+D:\Prog\TimerShutdown\ApagarPC\bin\Release\ApagarPC.exe
+D:\Prog\TimerShutdown\ApagarPC\bin\Release\ApagarPC.pdb
+D:\Prog\TimerShutdown\ApagarPC\obj\Release\ApagarPC.Form1.resources
+D:\Prog\TimerShutdown\ApagarPC\obj\Release\ApagarPC.Properties.Resources.resources
+D:\Prog\TimerShutdown\ApagarPC\obj\Release\ApagarPC.csproj.GenerateResource.cache
+D:\Prog\TimerShutdown\ApagarPC\obj\Release\ApagarPC.csproj.CoreCompileInputs.cache
+D:\Prog\TimerShutdown\ApagarPC\obj\Release\ApagarPC.exe
+D:\Prog\TimerShutdown\ApagarPC\obj\Release\ApagarPC.pdb

@@ -39,6 +39,9 @@
             this.txtBoxSecs = new System.Windows.Forms.TextBox();
             this.btnCancionBB = new System.Windows.Forms.Button();
             this.btnDisketera = new System.Windows.Forms.Button();
+            this.dateTimePkrHours = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // btnExit
@@ -171,6 +174,41 @@
             this.btnDisketera.UseVisualStyleBackColor = false;
             this.btnDisketera.Click += new System.EventHandler(this.btnDisketera_Click);
             // 
+            // dateTimePkrHours
+            // 
+            this.dateTimePkrHours.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.dateTimePkrHours.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePkrHours.Location = new System.Drawing.Point(414, 479);
+            this.dateTimePkrHours.MinDate = new System.DateTime(2018, 11, 25, 0, 0, 0, 0);
+            this.dateTimePkrHours.Name = "dateTimePkrHours";
+            this.dateTimePkrHours.Size = new System.Drawing.Size(181, 20);
+            this.dateTimePkrHours.TabIndex = 12;
+            this.dateTimePkrHours.Value = new System.DateTime(2018, 11, 25, 13, 21, 32, 0);
+            this.dateTimePkrHours.Leave += new System.EventHandler(this.dateTimePkrHours_Leave);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.GrayText;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(215, 479);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(112, 31);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Tiempo:";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Enabled = false;
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePicker1.Location = new System.Drawing.Point(148, 302);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(71, 20);
+            this.dateTimePicker1.TabIndex = 14;
+            this.dateTimePicker1.Value = new System.DateTime(2018, 11, 25, 13, 21, 44, 0);
+            this.dateTimePicker1.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -179,6 +217,9 @@
             this.AutoSize = true;
             this.BackgroundImage = global::ApagarPC.Properties.Resources.DisneyWallpaperRosa;
             this.ClientSize = new System.Drawing.Size(1843, 1061);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dateTimePkrHours);
             this.Controls.Add(this.btnDisketera);
             this.Controls.Add(this.btnCancionBB);
             this.Controls.Add(this.txtBoxSecs);
@@ -212,6 +253,9 @@
         private System.Windows.Forms.TextBox txtBoxSecs;
         private System.Windows.Forms.Button btnCancionBB;
         private System.Windows.Forms.Button btnDisketera;
+        private System.Windows.Forms.DateTimePicker dateTimePkrHours;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
 

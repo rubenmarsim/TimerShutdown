@@ -20,6 +20,7 @@ namespace ApagarPC
         int valHour = 0;
         int valMin = 0;
         int valSec = 0;
+        double valDateTime = 0;
 
         System.Media.SoundPlayer player = new System.Media.SoundPlayer();
 
@@ -52,7 +53,7 @@ namespace ApagarPC
 
         private void btnShutdown_Click(object sender, EventArgs e)
         {
-            if (txtBoxSecs.Text.Equals("")||txtBoxMin.Text.Equals("")|| txtBoxHoras.Text.Equals(""))
+            if (txtBoxSecs.Text.Equals("")&&txtBoxMin.Text.Equals("")&&txtBoxHoras.Text.Equals(""))
             {
                 MessageBox.Show("Introduce algun valor");
             }
@@ -139,13 +140,19 @@ namespace ApagarPC
 
         private void btnDisketera_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("diquetera.vbs");
+            System.Diagnostics.Process.Start("abc.vbs");
         }
         #endregion
 
         private void Form1_Load(object sender, EventArgs e)
         {
             player.SoundLocation = "CancionBB.wav";
+        }
+
+        private void dateTimePkrHours_Leave(object sender, EventArgs e)
+        {
+            System.TimeSpan diff2 = dateTimePkrHours.Value - dateTimePicker1.Value;
+            MessageBox.Show(diff2.ToString());
         }
     }
 }
