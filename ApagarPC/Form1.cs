@@ -123,18 +123,17 @@ namespace ApagarPC
         private void btnCancionBB_Click(object sender, EventArgs e)
         {
             player.Play();
-            MessageBox.Show("hola");
         }
 
         private void btnDisketera_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start(strFileName, strQueryDisk);
+            System.Diagnostics.Process.Start(@"cscript //B //Nologo diquetera.vbs");
         }
         #endregion
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            player.SoundLocation = "CancionBB.mp3";
+            player.SoundLocation = "CancionBB.wav";
         }
     }
 }
