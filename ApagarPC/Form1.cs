@@ -15,7 +15,9 @@ namespace ApagarPC
         const string strFileName="shutdown";
         const string strQuery = "/s /t ";
         string strTime = "";
+        int valHour = 0;
         int valMin = 0;
+        int valSec = 0;
 
         public Form1()
         {
@@ -35,6 +37,14 @@ namespace ApagarPC
         private void btnShutdown_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start(strFileName, strQuery+strTime);
+        }
+
+        public void Conversion()
+        {
+            valHour = int.Parse(txtBoxHoras.Text)*120;
+            valMin = int.Parse(txtBoxMin.Text) * 60;
+            valSec = int.Parse(txtBoxSecs.Text)+valMin+valHour;
+            strTime = valSec.ToString();
         }
     }
 }
